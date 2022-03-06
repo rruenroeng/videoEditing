@@ -1,7 +1,12 @@
-import { useVideoConfig } from "remotion";
+import { useVideoConfig, useCurrentFrame } from "remotion";
+import { France } from "./France";
+import { Rain } from "./Rain";
 
 export const MyComposition = () => {
 	const {fps, durationInFrames, width, height } = useVideoConfig();
+	const frame = useCurrentFrame();
+	const opacity = frame/ durationInFrames;
+
 	return (
 	<div
 		style= {{
@@ -10,11 +15,14 @@ export const MyComposition = () => {
 			fontSize: '7em',
 			background:'black',
 			color: 'red',
+			opacity
 		}}
 		>
 			Hi Mom!
 			I made a {width}x{height}px video that is 
 			{ durationInFrames/fps} seconds long.
+			<France/>
+			<Rain />
 		</div>
 	);
 };
