@@ -1,5 +1,5 @@
-#Inspiration
-Tutorial by Stephen Grider
+# Inspiration
+Tutorial by Stephen Grider:
 [Stephen Grider's Tutotal for Remotion]("https://www.youtube.com/watch?v=deg8bOoziaE")
 
 # Remotion video
